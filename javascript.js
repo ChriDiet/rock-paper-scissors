@@ -17,6 +17,7 @@ function getComputerChocie() {
       case 2:
          random = "scissors"; }
    return(random);
+   console.log("Computer chose " + random);
 }
 
 function getHumanChoice () {
@@ -39,15 +40,17 @@ function playRound (humanChoice, computerChoice) {
 if (humanChoice === "rock" && computerChoice === "paper" || 
    humanChoice === "paper" && computerChoice === "scissors" ||
    humanChoice === "scissors" && computerChoice === "rock") {
-   console.log("You lose");
+   console.log("You lose!");
 } else if (humanChoice === "paper" && computerChoice === "rock" || humanChoice === "rock" && computerChoice === "scissors" || humanChoice === "scissors" && computerChoice === "paper") {
    console.log("You won!");
 } else { 
-   console.log("Its a tie");
+   console.log("Its a tie!");
 }
 }
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChocie();
+console.log("You chose " + humanSelection);
+console.log("Computer chose " + computerSelection);
 
 playRound(humanSelection, computerSelection);

@@ -4,13 +4,12 @@ Computer generate random choice with function getComputerChocie
 Print computers choice and users choice
 Determine which one is the winner 
 Print you won/you lost*/
-
-
-
+let answer = prompt("Choose rock, paper or scissors")
+let newAnswer = answer.toLowerCase();
+let finalAnswer = `"${newAnswer}"`;
 
 function getUserChoice() {
-   let answer = prompt("Choose rock, paper or scissors")
-   console.log(answer)
+   console.log("You chose " + (finalAnswer))
 }
 getUserChoice();
 function getComputerChoice () {
